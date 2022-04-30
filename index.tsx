@@ -1,0 +1,42 @@
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import ReactPlayer from 'react-player';
+import './style.css';
+
+
+const params = new URLSearchParams(window.location.search);
+const paramValue = params.get("url");
+if(paramValue. indexOf(".mp4") !== -1){
+  var thumb = paramValue.replace(".mp4", ".png");
+  }
+else {var thumb = paramValue.replace(".webm", ".png");
+}; 
+
+const thumbnail = thumb;
+//const paramValue = "https://res.cloudinary.com/wikacy-com/video/upload/q_auto/v1651114173/promos/superior-rahil-boobaram-visualization_hxtxv0.mp4"
+
+
+
+ 
+
+const App: React.FC = () => (
+  <div>
+    <ReactPlayer url={paramValue}
+    
+    light={thumbnail}
+    playing={true}   
+    controls
+    preload
+    disableRemotePlayback={true}
+    allowFullscreen ={false}
+    playbackrate= {false}
+    config={{ file: { attributes: { controlsList: 'nodownload noplaybackrate nofullscreen noremoteplayback',disablePictureInPicture: true } } }}
+    width='100%'
+    height='100%'
+    playIcon={<img src="https://res.cloudinary.com/wikacy-com/image/upload/v1651301517/logos/wikacy-play-button_qksaic.png"/>}
+    
+     />
+  </div>
+);
+
+render(<App />, document.getElementById('root'));

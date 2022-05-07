@@ -4,11 +4,11 @@ import ReactPlayer from 'react-player';
 import './style.css';
 
 
-//const params = new URLSearchParams(window.location.search);
-//const paramValue = params.get("url");
+const params = new URLSearchParams(window.location.search);
+const paramValue = params.get("url");
 
 
-const paramValue = "https://res.cloudinary.com/wikacy-com/video/upload/q_auto/v1651114173/promos/superior-rahil-boobaram-visualization_hxtxv0.mp4"
+//const paramValue = "https://res.cloudinary.com/wikacy-com/video/upload/q_auto/v1651114173/promos/superior-rahil-boobaram-visualization_hxtxv0.mp4"
 
 
 
